@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+
+# Model files
+models/
+*.pkl
+
+# OS/editor
+.DS_Store
+*.swp
