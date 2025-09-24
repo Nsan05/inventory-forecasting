@@ -145,9 +145,11 @@ Follow the prompt to input a store number (1–10). The script will display a ba
 Projects/
 │
 ├─ forecast.py  # Main script
-├─ train.csv                                              
-├─ xgb_sales_model.pkl                                    
-├─ scaler.pkl                                             
+├─ models/
+|  ├─ train.csv
+├─ data/                                      
+|  ├─ xgb_sales_model.pkl                                    
+|  ├─ scaler.pkl                                             
 ├─ requirements.txt                                      
 ├─ README.md                                              
 └─ .gitignore                                            
