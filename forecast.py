@@ -20,7 +20,7 @@ warnings.filterwarnings('ignore')
 
 # ----- Reading the data -----
 
-df = pd.read_csv("train.csv")
+df = pd.read_csv("data/train.csv")
 
 # ----- Feature Engineering -----
 
@@ -130,12 +130,13 @@ for i in range(4):
 
 # Saving the model
 best_model = models[1]
-joblib.dump(best_model, "xgb_sales_model.pkl")
-joblib.dump(scaler, "scaler.pkl")
+joblib.dump(best_model, "models/xgb_sales_model.pkl")
+joblib.dump(scaler, "models/scaler.pkl")
 
 
 # future prediction
-future_dates = pd.date_range(start='2025-09-21', periods=7)
+today = datetime.today().date()
+future_dates = pd.date_range(start=today, periods=7)
 stores = df['store'].unique() 
 items = df['item'].unique()
 
